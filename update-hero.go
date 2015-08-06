@@ -10,6 +10,7 @@ import (
 	"runtime"
 	"strconv"
 	"strings"
+	"flag"
 )
 
 var heroName = []string{
@@ -203,13 +204,17 @@ func main() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	log.SetFlags(log.Lshortfile)
 
+	// version
+	var version = flag.String("v", "", "version")
+	flag.Parse()
+
 	type outputFormat struct {
 		Version string  `json:"version"`
 		Hero    []*Hero `json:"hero"`
 	}
 
 	o := &outputFormat{
-		Version: "1.6.0",
+		Version: *version,
 		Hero:    make([]*Hero, len(heroName)),
 	}
 	for i, url := range urls(heroName) {
