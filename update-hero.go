@@ -28,6 +28,7 @@ var heroName = []string{
 	"Rona",
 	"SAW",
 	"Skaarf",
+	"Skye",
 	"Taka",
 	"Vox",
 }
