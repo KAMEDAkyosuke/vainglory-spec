@@ -24,6 +24,7 @@ var heroName = []string{
 	"Koshka",
 	"Krul",
 	"Petal",
+	"Phinn",
 	"Ringo",
 	"Rona",
 	"SAW",
